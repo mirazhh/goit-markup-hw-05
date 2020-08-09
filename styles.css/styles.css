@@ -30,6 +30,7 @@
     --darker-background-color: #F5F4FA;
     --background-footer-color: #2F303A;
     --social-links-svg-main-color: #afb1b8;
+
 }
 
 body {
@@ -730,3 +731,4 @@ img, p, b {
     text-transform: uppercase;
     color: var(--dark-theme-text-color) /*#FFFFFF*/;
 }
+
