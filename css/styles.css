@@ -357,6 +357,16 @@ img, p, b {
     margin-right: 30px;
 }
 
+.what-we-do-pic-wrapper {
+    position: relative;
+}
+
+.what-we-do-title-wrapper {
+    position: absolute;
+    bottom: 0;
+}
+
+
 .what-we-do-item-title {
     align-items: center;
     justify-content: center;
@@ -646,6 +656,36 @@ img, p, b {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.our-projects-item-link:hover   .our-projects-photo-wrapper:before {
+    opacity: 1;
+}
+
+.our-projects-photo-wrapper {
+    position: relative;
+}
+
+.our-projects-photo-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-blue-color);
+    
+    opacity: 0;
+}
+
+.our-projects-description-wrapper {
+    width: 322px;
+    height: 168px;
+    color: var(--dark-theme-text-color);
+    padding-top: 63px;
+    padding-right: 24px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+}
+
 .our-projects-information {
     padding-top: 20px;
     padding-right: 24px;
@@ -667,6 +707,15 @@ img, p, b {
     line-height: 2.00;
     letter-spacing: 0.06em;
     color: var(--dark-grey-text-color) /*#212121*/;
+}
+
+/*.our-projects-item-description {
+    position: relative;
+    opacity: 0;
+}
+
+.our-projects-item-description:hover {
+    opacity: 1;*/
 }
 
 .our-projects-item-type {
