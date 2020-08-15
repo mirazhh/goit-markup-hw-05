@@ -69,6 +69,7 @@ img, p, b {
     display: block;
 }
 
+
 /*.header-box*/
 
 .header-box {
@@ -240,6 +241,9 @@ img, p, b {
 }
 
 .hero-section-button {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -262,8 +266,8 @@ img, p, b {
 
 .hero-section-button:hover,
 .hero-section-button:focus {
-    background-color: var(--accent-blue-color) /*#2196F3*/;
     color: var(--dark-theme-text-color) /*#FFFFFF*/;
+    background-color: var(--accent-blue-color) /*#2196F3*/;
 }
 
 /*Our strengths section*/
@@ -611,7 +615,8 @@ img, p, b {
     padding-top: 221px;
 }
 
-.backdrop .is-hidden {
+.backdrop .is-hidden .modal {
+    transform: translate(-50%, -50%);
     opacity: 0;
     pointer-events: none;
 }
@@ -620,10 +625,12 @@ img, p, b {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    transition-property: scale;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    transform: translate(-50%, -50%);
+    animation-name: backInLeft;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
     width: 528px;
     height: 581px;
 
@@ -631,12 +638,6 @@ img, p, b {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
-
-.modal:hover,
-.modal:focus {
-    transform: translate(-50%, -50%) scale(1);
-}
-
 
 .button-close-modal {
     display: flex;
