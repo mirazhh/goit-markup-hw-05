@@ -63,14 +63,15 @@
 
       <section class="hero-section">
         <div class="hero-section-overlay">
-          <div class="hero-section-container">
+          <div class="hero-section-container container">
             <h1 class="hero-section-title">
             Эффективные решения
             <br />
             для вашего бизнеса
             </h1>
-             <button class="hero-section-button" type="button" aria-label="Заказать услугу">Заказать услугу
+             <button data-modal-open class="hero-section-button" type="button" aria-label="Заказать услугу">Заказать услугу
              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -442,7 +443,7 @@
             </a>
           </li>
         </ul>
-        </div>
+      </div>
       </section>
     </main>
 
@@ -511,5 +512,13 @@
       </div> 
     </footer>
 
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="button-close-modal" data-modal-close>
+        </button>
+        <p class="leave-the-details-text">Оставьте свои данные, мы вам перезвоним</p>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
